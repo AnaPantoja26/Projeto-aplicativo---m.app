@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>m.app — corra atrás do que vale</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- TELA 1 -->
+  <!-- TELA 1 (Principal) -->
   <div class="stage" id="tela1">
     <div class="mesh" aria-hidden="true">
       <div class="extra"></div>
@@ -17,7 +19,9 @@
     <div class="grain" aria-hidden="true"></div>
 
     <div class="logo-wrap">
-      <div class="logo" id="logo">m<span class="dot">.</span>app</div>
+        <div class="logo" id="logo">
+            <span class="l">m</span><span class="dot">.</span><span class="l">a</span><span class="l">p</span><span class="l">p</span>
+        </div>
     </div>
 
     <div class="ui-panel">
@@ -27,7 +31,7 @@
   </div>
 
   <!-- TELA 2 (Cadastro) -->
-  <div class="stage fade hidden" id="tela2">
+  <div class="stage hidden" id="tela2">
     <div class="form-wrapper">
       <h2>Crie sua conta</h2>
       <input type="text" placeholder="Seu nome" />
