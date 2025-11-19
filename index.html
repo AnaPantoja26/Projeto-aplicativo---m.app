@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="stage">
+
+  <!-- TELA 1 -->
+  <div class="stage" id="tela1">
     <div class="mesh" aria-hidden="true">
       <div class="extra"></div>
     </div>
@@ -21,6 +23,16 @@
     <div class="ui-panel">
       <div class="chip">Demo</div>
       <div class="chip">v1.0</div>
+    </div>
+  </div>
+
+  <!-- TELA 2 (Cadastro) -->
+  <div class="stage fade hidden" id="tela2">
+    <div class="form-wrapper">
+      <h2>Crie sua conta</h2>
+      <input type="text" placeholder="Seu nome" />
+      <input type="email" placeholder="Seu e-mail" />
+      <button>Cadastrar</button>
     </div>
   </div>
 
