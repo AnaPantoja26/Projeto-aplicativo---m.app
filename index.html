@@ -33,13 +33,66 @@
   <!-- TELA 2 (Cadastro) -->
   <div class="stage hidden" id="tela2">
     <div class="form-wrapper">
-      <h2>Crie sua conta</h2>
-      <input type="text" placeholder="Seu nome" />
-      <input type="email" placeholder="Seu e-mail" />
-      <button>Cadastrar</button>
+        <h2>Crie sua conta</h2>
+  
+    <div class="input-group">
+        <input type="text" placeholder="Seu nome" />
+        <span class="error-msg">Campo obrigatório</span>
+    </div>
+
+    <div class="input-group">
+        <input type="email" placeholder="Seu e-mail" />
+        <span class="error-msg">Campo obrigatório</span>
+    </div>
+
+    <div class="input-group">
+        <input type="password" placeholder="Senha" />
+        <span class="error-msg">Campo obrigatório</span>
+    </div>
+
+    <div class="input-group">
+        <input type="password" placeholder="Confirme a senha" />
+        <span class="error-msg">Campo obrigatório</span>
+    </div>
+
+  <!-- Permissões/Termos -->
+    <div class="checkbox-group">
+        <label><input type="checkbox" required /> Aceito os <a href="#">Termos de Uso</a> e <a href="#">Política de Privacidade</a></label>
+        <label><input type="checkbox" /> Permitir microfone</label>
+        <label><input type="checkbox" /> Permitir câmera</label>
+        <label><input type="checkbox" /> Permitir localização</label>
+    </div>
+
+    <button>Cadastrar</button>
     </div>
   </div>
 
+  <!-- TELA 3 — CRIAÇÃO DE AVATAR -->
+    <div id="tela3" class="stage hidden">
+        <div class="avatar-wrapper">
+            <h2>Crie Seu Avatar</h2>
+
+            <div class="nickname-group">
+                <label>Nickname</label>
+                <input type="text" id="nickname" placeholder="Seu nome no app">
+                <span class="error-msg"></span>
+            </div>
+
+            <p class="avatar-label">Escolha seu avatar</p>
+
+            <div class="avatar-grid">
+                <img src="avatars/avatar1.png" class="avatar-option">
+                <img src="avatars/avatar2.png" class="avatar-option">
+                <img src="avatars/avatar3.png" class="avatar-option">
+                <img src="avatars/avatar4.png" class="avatar-option">
+                <img src="avatars/avatar5.png" class="avatar-option">
+                <img src="avatars/avatar6.png" class="avatar-option">
+            </div>
+
+            <button id="finalizarAvatar">Finalizar</button>
+        </div>
+    </div>
+    
   <script src="script.js"></script>
 </body>
 </html>
