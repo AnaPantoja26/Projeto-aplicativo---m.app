@@ -4,10 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>m.app — corra atrás do que vale</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
-  <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
 </head>
 <body>
 
@@ -67,32 +69,76 @@
     </div>
   </div>
 
-  <!-- TELA 3 — CRIAÇÃO DE AVATAR -->
-    <div id="tela3" class="stage hidden">
+  <!-- TELA 3 (Avatar) -->
+    <div class="stage hidden" id="tela3" >
         <div class="avatar-wrapper">
             <h2>Crie Seu Avatar</h2>
 
             <div class="nickname-group">
-                <label>Nickname</label>
-                <input type="text" id="nickname" placeholder="Seu nome no app">
+                <label>Username</label>
+                <input type="text" id="nickname" placeholder="Escreva o nome do seu avatar" required>
                 <span class="error-msg"></span>
             </div>
 
             <p class="avatar-label">Escolha seu avatar</p>
 
             <div class="avatar-grid">
-                <img src="avatars/avatar1.png" class="avatar-option">
-                <img src="avatars/avatar2.png" class="avatar-option">
-                <img src="avatars/avatar3.png" class="avatar-option">
-                <img src="avatars/avatar4.png" class="avatar-option">
-                <img src="avatars/avatar5.png" class="avatar-option">
-                <img src="avatars/avatar6.png" class="avatar-option">
+                <img src="./assets/midia/image/avatar 1.jpg" class="avatar-option">
+                <img src="./assets/midia/image/avatar 2.jpg" class="avatar-option">
+                <img src="./assets/midia/image/avatar 3.jpg" class="avatar-option">
+                <img src="./assets/midia/image/avatar 4.jpg" class="avatar-option">
+                <img src="./assets/midia/image/avatar 5.jpg" class="avatar-option">
+                <img src="./assets/midia/image/avatar 6.jpg" class="avatar-option">
             </div>
 
             <button id="finalizarAvatar">Finalizar</button>
         </div>
     </div>
-    
-  <script src="script.js"></script>
+
+  <!-- TELA 4 (Boas-vindas após criação do avatar) -->
+  <div class="stage hidden" id="tela4">
+    <div class="welcome-wrapper">
+
+      <h2 id="welcome-message">Pode começar, Ana!</h2>
+
+      <div class="avatar-display">
+        <img id="selected-avatar" src="" alt="Seu Avatar">
+      </div>
+
+      <p class="welcome-text">Pronto para correr atrás do que vale?</p>
+
+      <button id="start-app" class="start-button">Começar</button>
+
+    </div>
+  </div>
+
+  <!-- TELA 5 (Principal do App) -->
+<div class="stage hidden" id="telaPrincipal">
+
+  <div class="header-app">
+    <div class="header-left">
+      <button id="btnMapa" class="icon-btn"><span>🗺️</span></button>
+    </div>
+    <div class="header-center">
+      <span class="points">Pontuação: <span id="userPoints">0</span></span>
+    </div>
+    <div class="header-right">
+      <button id="btnConfig" class="icon-btn"><span>⚙️</span></button>
+    </div>
+  </div>
+
+  <!-- Área AR + Mapa -->
+  <div class="ar-area">
+    <video id="cameraFeed" autoplay playsinline></video>
+    <div id="arOverlay"></div>
+    <div id="mapContainer"></div>
+  </div>
+</div>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.155.0/build/three.min.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
